@@ -1,5 +1,7 @@
 
-
+body{
+    width:100%;
+}
 .page-header {
     background-color: rgb(147,129,114);
     margin-top: 0;
@@ -43,7 +45,9 @@ h1, h2, h3, h4 {
 }
 
 .post {
+    border-top: solid 0.1em;
     margin-bottom: 70px;
+    width: 100%;
 }
 
 .post h1 a, .post h1 a:visited {
