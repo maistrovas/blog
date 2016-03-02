@@ -7,7 +7,7 @@
 	    	
 	{% if user.is_authenticated %}
 	    	{% if post.published_date %}
-	    	    <div class='date'>
+	    	    <div class='date'> Published
 	    		{{post.published_date}}
 	    	    </div>
 	    	    
@@ -16,12 +16,20 @@
 	    	    {% else %}
 	    	    
 	    	    <a class="btn btn-default" href="{% url 'my_blog.views.post_publish' pk=post.pk %}">Publish</a>
+	    		
 	    	{% endif %}
 	    	
-	    	
-		
 			<a class="btn btn-default" href="{% url 'post_remove' pk=post.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
 	    	<a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+		
+		{% else %}
+		     <a href="{% url 'django.contrib.auth.views.login' %}" class="tbtn btn-default"><span class="glyphicon glyphicon-lock"></span></a>
+		     
+			<div class='date'>Published 
+	    	{{post.published_date}}
+	    	</div>
+
+
 		{% endif %}	
 	    	<p>{{post.text|linebreaks}}</p>
 	    </div>
