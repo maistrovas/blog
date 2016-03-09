@@ -1,6 +1,7 @@
 
 body{
     width:100%;
+    background-image: url('wov.png')
 }
 .page-header {
     background-color: rgb(147,129,114);
