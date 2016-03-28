@@ -30,8 +30,10 @@
 	    	</div>
 
 
-		{% endif %}	
-	    	<p>{{post.text|linebreaks}}</p>
+		{% endif %}
+			
+	    	<p class="text-left">{{post.text | linebreaks}}</p>
+
 	    </div>
 		<hr>
 	 <a class="btn btn-default" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>

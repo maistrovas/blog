@@ -10,7 +10,7 @@
             <div id='post_title'>
             <h1><a href="{% url 'post_detail' pk=post.pk%}">{{ post.title }}</a></h1>
             </div>
-            <p>{{ post.text|linebreaks |truncatewords:50 }}</p>
+            <p >{{ post.text|linebreaks |truncatewords:100 }}</p>
         <a href="{% url 'my_blog.views.post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
         </div>
     {% endfor %}
