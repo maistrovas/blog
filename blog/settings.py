@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'my_blog',
+    'ckeditor',
+    
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -82,7 +84,12 @@ DATABASES = {
     }
 }
 
-
+CKEDITOR_CONFIGS = {
+    'default': {
+        'forcePasteAsPlainText': True
+    }
+}
+CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
