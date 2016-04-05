@@ -32,7 +32,9 @@
 
 		{% endif %}
 			
-	    	<p class="text-left">{{post.text | linebreaks}}</p>
+	    	
+	    	<p class="text-left">{{post.text | safe}}</p>
+
 
 	    </div>
 		<hr>

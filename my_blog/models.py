@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 from django.db import models
 from django.utils import timezone
 from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField ### For image uploading too
 
 # Create your models here.
 
@@ -13,7 +14,7 @@ class Post(models.Model):
     
     # Title only english
     title = models.CharField(max_length=200)
-    text = RichTextField()
+    text = RichTextUploadingField()
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
 
